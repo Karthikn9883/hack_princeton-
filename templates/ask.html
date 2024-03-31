@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ask a Question</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='question_answering.css') }}">
+</head>
+<body>
+    <a href="/doctor_home" class="back-button">← Back</a>
+    
+    <div class="card">
+        <h1>Ask Questions</h1>
+        <!-- Error message if exists -->
+        {% if error_message %}
+        <p class="error-message">{{ error_message }}</p>
+        {% endif %}
+        <form action="/ask" method="post" class="question-form">
+            <label for="question" class="form-label">Enter your question:</label>
+            <input type="text" id="question" name="question" class="input-field" required>
+            <input type="submit" value="Submit" class="button">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f2fa; /* Light blue background */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+  
+.back-button {
+    background-color: #dc3545; /* Red color for the back button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute; /* Position it at the top-right */
+    top: 20px;
+    right: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+.back-button:hover {
+    background-color: #003d82; /* Even darker blue on hover */
+    text-decoration: underline;
+}
+  
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+  
+h2 {
+    text-align: center;
+    grid-column: 1 / -1;
+    color: #333;
+}
+  
+.day, .date {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+  
+.date {
+    background-color: #f0f8ff; /* Alice blue background for dates */
+    position: relative;
+    transition: all 0.3s ease;
+}
+  
+.date.off {
+    background-color: #d0e0f0; /* Lighter blue for off days */
+}
+  
+.event {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8em;
+    padding: 2px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+  
+.test-reminder {
+    background-color: #b0c4de; /* Light steel blue for test reminders */
+}
+  
+.online-consult {
+    background-color: #87cefa; /* Light sky blue for online consultations */
+}
+  
+.date:hover {
+    background-color: #add8e6; /* Light blue background for hovered dates */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+  
+.event:hover {
+    transform: scale(1.1);
+}
+  
+.date:hover .event {
+    transform: none; /* Keep events from scaling when the date is hovered */
+}

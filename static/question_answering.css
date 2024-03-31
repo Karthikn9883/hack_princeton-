@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #e6f4f0; /* Soft blue background for a calming effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.answer-container, .card {
+    background-color: white; /* White background for content containers */
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.question-answer-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f8f9fa; /* Light blue-grey background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+}
+
+.question-answer-table th,
+.question-answer-table td {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.question-answer-table th {
+    background-color: #007bff; /* Bright blue header */
+    color: white;
+}
+
+.button {
+    padding: 15px 20px;
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Red back button with hover animation */
+.back-button {
+    padding: 10px 20px;
+    background-color: #dc3545; /* Red background for the back button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Slight shadow for depth */
+}
+
+.back-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+    text-decoration: underline;
+    transform: scale(1.05); /* Slight increase in size on hover */
+}

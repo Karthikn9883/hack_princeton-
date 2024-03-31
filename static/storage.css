@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f4ea; /* Light green background */
+}
+
+.header {
+    background-color: #006400; /* Dark green header */
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between; /* Spreads out the header contents */
+    align-items: center;
+}
+
+.header h1 {
+    margin-left: 20px; /* Adds spacing to the left of the title */
+    flex-grow: 1; /* Allows the title to grow and push the back button to the edge */
+}
+
+.header a {
+    color: white;
+    background-color: #dc3545; /* Bootstrap's red */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 20px; /* Adds spacing to the right of the back button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.header a:hover {
+    background-color: #c82333; /* A slightly darker red on hover */
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Rounded corners for container */
+}
+
+.actions {
+    margin-bottom: 20px;
+}
+
+.upload-form input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.upload-form .button {
+    background-color: #32cd32; /* Lime Green color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for button hover */
+}
+
+.upload-form .button:hover {
+    background-color: #228b22; /* Forest Green color on hover */
+}
+
+.uploaded-files h2 {
+    margin-top: 0;
+    color: #006400; /* Dark green text */
+}
+
+.file-item {
+    background-color: #f0fff0; /* Honeydew background for items */
+    border: 1px solid #8fbc8f; /* Dark Sea Green border */
+    padding: 10px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px; /* Rounded corners for file items */
+}
+
+.file-item a {
+    text-decoration: none;
+    color: #008000; /* Green text */
+}
+
+.file-item a:hover {
+    text-decoration: underline;
+}
+
+.remove-form .button {
+    background-color: #ff4500; /* OrangeRed background for remove button */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for button hover */
+}
+
+.remove-form .button:hover {
+    background-color: #ff6347; /* Tomato color on hover */
+}

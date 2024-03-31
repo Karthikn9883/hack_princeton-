@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='doctor_home.css') }}">
+</head>
+<body>
+    <div id="particles-js" class="particles-container"></div> <!-- Particle container -->
+    <div class="header">
+        <h1>Welcome Doctor!</h1>
+        <a href="/logout" class="logout-button">Log out</a>
+    </div>
+    <div class="content">
+        <a href="/patients" class="action-box">
+            <img src="{{ url_for('static', filename='view_patient.jpeg') }}" alt="View Patients">
+            <h2>View Patients</h2>
+        </a>
+        <a href="/meeting" class="action-box">
+            <img src="{{ url_for('static', filename='join_meeting.jpeg') }}" alt="Join Meeting">
+            <h2>Join Meeting</h2>
+        </a>
+        <a href="/ask" class="action-box">
+            <img src="{{ url_for('static', filename='your_assistant.jpeg') }}" alt="Your Assistant">
+            <h2>Your Assistant</h2>
+        </a>
+        <a href="/doctor_calendar" class="action-box">
+            <img src="{{ url_for('static', filename='WhatsApp Image 2024-03-31 at 04.24.39.jpeg') }}" alt="Calendar">
+            <h2>Calendar</h2>
+        </a>
+    </div>
+        <!-- Other content -->
+    </div>
+    <!-- Include the particles.js library -->
+    <script src="{{ url_for('static', filename='particles.js') }}"></script>
+    <!-- Initialize particles.js -->
+    <script>
+        particlesJS.load('particles-js', "{{ url_for('static', filename='particles.json') }}", function() {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+</body>
+</html>

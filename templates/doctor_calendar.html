@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor's Calendar</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='doctor_calendar.css') }}">
+</head>
+<body>
+
+    <a href="{{ url_for('doctor_home') }}" class="back-button">&larr; Back</a>
+
+<div class="calendar">
+  <h2>Doctor's Calendar - March 2024</h2>
+  <div class="day" style="grid-column: 2;">Mon</div>
+  <div class="day" style="grid-column: 3;">Tue</div>
+  <div class="day" style="grid-column: 4;">Wed</div>
+  <div class="day" style="grid-column: 5;">Thu</div>
+  <div class="day" style="grid-column: 6;">Fri</div>
+  <div class="date off">1</div>
+  <div class="date off">2</div>
+  <div class="date">3</div>
+  <div class="date">4</div>
+  <div class="date">5 <span class="event appointment">Patient John Doe</span></div>
+  <div class="date off">6</div>
+  <div class="date off">7</div>
+  <div class="date">8</div>
+  <div class="date">9 <span class="event meeting">Staff Meeting</span></div>
+  <div class="date">10</div>
+  <div class="date">11</div>
+  <div class="date">12 <span class="event followup">Follow-up Jane Smith</span></div>
+  <div class="date off">13</div>
+  <div class="date off">14</div>
+  <div class="date">15</div>
+  <div class="date">16</div>
+  <div class="date">17</div>
+  <div class="date">18 <span class="event closed">Clinic Closed</span></div>
+  <div class="date">19</div>
+  <div class="date off">20</div>
+  <div class="date off">21</div>
+  <!-- Add more dates as needed -->
+  <div class="date">22</div>
+  <div class="date">23 </div>
+  <div class="date">24</div>
+  <div class="date">25</div>
+  <div class="date">26 <span class="event meeting">Staff Meeting</span></div>
+  <div class="date off">27</div>
+  <div class="date off">28</div>
+  <!-- Week 5 -->
+  <div class="date">29</div>
+  <div class="date">30 </div>
+</div>
+
+</body>
+</html>

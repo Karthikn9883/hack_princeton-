@@ -1,0 +1,76 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f4ea; /* Light green background from storage page */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.back-button {
+    background-color: #dc3545; /* Red color for the back button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute; /* Position it at the top-right */
+    top: 20px; /* Adjust based on your preference */
+    right: 20px; /* Place it on the right side */
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #c82333; /* A slightly darker red on hover */
+    text-decoration: underline;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Adjust to match the storage page width */
+}
+
+input[type="file"],
+input[type="submit"] {
+    width: calc(100% - 20px); /* Subtract padding */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    background-color: #32cd32; /* Lime Green color from storage page */
+    color: white;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+    border: none; /* Remove default border */
+}
+
+input[type="submit"]:hover {
+    background-color: #228b22; /* Forest Green color on hover from storage page */
+}
+
+p {
+    background-color: #dff0d8; /* Success message background from storage page */
+    border: 1px solid #d6e9c6; /* Success message border from storage page */
+    border-radius: 4px;
+    color: #3c763d; /* Success message text color from storage page */
+    font-size: 18px; /* Increase font size as needed */
+    padding: 10px; /* Add padding for the result text */
+    max-width: 80%; /* Optional: to ensure it doesn't stretch too wide */
+    text-align: center; /* Optional: to center the text if desired */
+}

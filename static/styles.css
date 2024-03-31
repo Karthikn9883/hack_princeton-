@@ -1,0 +1,67 @@
+.back-button {
+    padding: 10px 20px;
+    background-color: #f65f6e; /* Bootstrap's red color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    position: absolute; /* Position it at the top-right */
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #d82a3b; /* A slightly darker red on hover */
+    text-decoration: underline;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e7eff6; /* Light blue background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #333;
+    margin: 20px;
+}
+
+.patient-list, .uploaded-files {
+    width: 80%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff; /* Keep it white to contrast with the blue theme */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.patient-box, .uploaded-files li {
+    background-color: #d0e2f2; /* Lighter blue for patient box */
+    border: 1px solid #a1c2db; /* Slightly darker blue for border */
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    display: block; /* Make the anchor fill the box */
+    transition: transform 0.3s ease-in-out;
+}
+
+.patient-box:hover, .uploaded-files li:hover {
+    transform: scale(1.05);
+    background-color: #b1cef1; /* Slightly darker blue when hovered */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+

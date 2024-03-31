@@ -1,0 +1,27 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* Align children horizontally */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%; /* Full width */
+}
+
+#video-call-container {
+    flex: 1; /* Takes up half the space */
+    max-width: 50%; /* Half of the viewport width */
+}
+
+.transcription-area {
+    flex: 1; /* Takes up the remaining space */
+    background-color: #ca8e8e;
+    overflow-y: auto; /* Allows scrolling */
+    padding: 10px;
+    max-width: 50%; /* Half of the viewport width */
+}

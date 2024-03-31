@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patients</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <a href="/doctor_home" class="back-button">Back</a> <!-- Change this to an anchor tag -->
+    <h1>Patients</h1>
+    <!-- List of Patients -->
+    <div class="patient-list">
+        <a href="/patient_details/1" class="patient-box">John Doe</a>
+        <a href="/patient_details/2" class="patient-box">Jane Smith</a>
+        <a href="/patient_details/3" class="patient-box">Emily Johnson</a>
+        <a href="/patient_details/4" class="patient-box">Michael Brown</a>
+    </div>
+</body>
+</html>

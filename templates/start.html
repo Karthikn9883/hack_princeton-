@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='start.css') }}">
+</head>
+<body>
+    <div id="particles-js" class="particles-container"></div> <!-- Particle container -->
+    <h1 class="title">Welcome to MediCognize</h1>
+    <img src="{{ url_for('static', filename='images-2.jpg') }}" alt="Header Image" class="header-image"/>
+    <div class="container">
+        <div class="login-options">
+            <div class="option doctor">
+                <h2>Get started as a doctor</h2>
+                <button onclick="location.href='/login/doctor'">Login as Doctor</button>
+            </div>
+            <div class="option patient">
+                <h2>Get started as a patient</h2>
+                <button onclick="location.href='/login/patient'">Login as Patient</button>
+            </div>
+        </div>
+    </div>
+    <!-- Include the particles.js library -->
+    <script src="{{ url_for('static', filename='particles.js') }}"></script>
+    <!-- Initialize particles.js -->
+    <script>
+        particlesJS.load('particles-js', "{{ url_for('static', filename='particles.json') }}", function() {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+</body>
+</html>

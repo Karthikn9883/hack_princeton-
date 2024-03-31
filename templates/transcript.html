@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container {
+            margin: auto;
+            width: 80%;
+            padding: 10px;
+        }
+        #transcription {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            min-height: 100px;
+            width: 100%;
+            overflow-wrap: break-word;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for the transcription controls and display area -->
+    <div class="container">
+        <!-- Button to start transcription -->
+        <button id="startButton">Start Transcription</button>
+        <!-- Button to stop transcription -->
+        <button id="stopButton" disabled>Stop Transcription</button>
+        <!-- Display area for the transcribed text -->
+        <div id="transcription">Transcription will appear here...</div>
+    </div>
+    
+    <!-- Socket.IO client-side script for real-time communication -->
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <!-- Main script to handle transcription and communication with the server -->
+    <script>
+        // Establish connection with the server using Socket.IO
+        const socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port);
+
+        socket.on('connect', () => {
+            // Event listener for the 'Start Transcription' button
+            document.getElementById('startButton').addEventListener('click', () => {
+                // Request microphone permission and start transcription
+                navigator.mediaDevices.getUserMedia({ audio: true })
+                    .then(stream => {
+                        // Emit event to the server to start transcription
+                        socket.emit('start_transcription', {});
+                        // Disable 'Start' button and enable 'Stop' button
+                        document.getElementById('startButton').disabled = true;
+                        document.getElementById('stopButton').disabled = false;
+                    })
+                    .catch(error => {
+                        // Handle errors (e.g., microphone access denied)
+                        console.error('Microphone permission denied or error occurred:', error);
+                    });
+            });
+
+            // Event listener for the 'Stop Transcription' button
+            document.getElementById('stopButton').addEventListener('click', () => {
+                // Emit event to the server to stop transcription
+                socket.emit('stop_transcription', {});
+                // Enable 'Start' button and disable 'Stop' button
+                document.getElementById('startButton').disabled = false;
+                document.getElementById('stopButton').disabled = true;
+            });
+        });
+
+        // Listener for the 'transcribed_text' event to display the transcription
+        socket.on('transcribed_text', data => {
+        const transcriptionDiv = document.getElementById('transcription');
+        transcriptionDiv.textContent += data.text + ' ';
+    });
+    </script>
+</body>
+</html>

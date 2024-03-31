@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Patient Details for Patient #{{ patient_id }}</h1>
+    <div class="uploaded-files">
+        <h2>Uploaded Files:</h2>
+        <ul>
+            {% for file in files %}
+            <li><a href="{{ url_for('uploaded_file', filename=file) }}">{{ file }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <button onclick="location.href='/patients'" class="back-button">Back</button>
+</body>
+</html>

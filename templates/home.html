@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+  <div id="particles-js" class="particles-container"></div> <!-- Particles container must be first -->
+  <div class="header">
+      <div class="top-bar">
+          <h1 class="greeting">{{ greeting }}</h1>
+          <a href="/logout" class="logout-button">Log out</a>
+      </div>
+      <p id="typewriter-health-message" class="typewriter-text" data-text="{{ health_message }}"></p>
+  </div>
+  <div class="content">
+    <a href="/meeting" class="action-box">
+      <img src="{{ url_for('static', filename='patient_meeting.jpeg') }}" alt="Join Meeting">
+      <h2>Join Meeting</h2>
+    </a>
+    <a href="/storage" class="action-box">
+      <img src="{{ url_for('static', filename='powered by.png') }}" alt="Join Meeting">
+      <h2>Share files</h2>
+    </a>
+    <a href="/predict" class="action-box">
+      <img src="{{ url_for('static', filename='qd.jpeg') }}" alt="Quick Diagnosis">
+      <h2>Quick Diagnosis</h2>
+    </a>
+    <a href="/calendar" class="action-box">
+      <img src="{{ url_for('static', filename='calender_patient.jpeg') }}" alt="Calender">
+      <h2>Calendar</h2>
+    </a>
+    <a href="https://ba83-66-180-180-5.ngrok-free.app/" class="action-box" target="_blank">
+      <img src="{{ url_for('static', filename='store_data_patient.webp') }}" alt="Store data">
+      <h2>Store Data</h2>
+    </a>
+    <!-- Other content -->
+  </div>
+  
+      <!-- Other content -->
+  </div>
+  <script src="{{ url_for('static', filename='typewriter.js') }}"></script>
+  <script src="{{ url_for('static', filename='particles.js') }}"></script>
+  <script>
+    particlesJS.load('particles-js', "{{ url_for('static', filename='particles.json') }}", function() {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
+</body>
+</html>

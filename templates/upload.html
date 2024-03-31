@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Image for Diagnosis</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='upload.css') }}">
+</head>
+<body>
+    <a href="/home" class="back-button">Back</a>
+  <h1>Upload an image (.jpg only)</h1>
+  <form action="/predict" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".jpg, .jpeg" required>
+    <input type="submit" value="Upload and Classify">
+  </form>
+  {% if result %}
+  <p>{{ result }}</p>
+  {% endif %}
+</body>
+</html>
